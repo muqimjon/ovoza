@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Outfit", var(--font-sans);
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+/* Custom interactive custom glass structures */
+.liquid-grid-bg {
+  background-size: 40px 40px;
+  background-image: linear-gradient(to right, rgba(0, 242, 254, 0.03) 1px, transparent 1px),
+                    linear-gradient(to bottom, rgba(0, 242, 254, 0.03) 1px, transparent 1px);
+}
+
+.dark .liquid-grid-bg {
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+                    linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+}
+
+/* Liquid Glass Card style - Sleek Codex Version */
+.liquid-glass-card {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 
+    0 12px 40px 0 rgba(0, 0, 0, 0.04),
+    inset 0 1px 2px 0 rgba(255, 255, 255, 1);
+  border-radius: 20px;
+}
+
+.dark .liquid-glass-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 
+    0 12px 40px 0 rgba(0, 0, 0, 0.5),
+    inset 0 1px 2px 0 rgba(255, 255, 255, 0.08);
+}
+
+/* Iridescent refractions (Rainbow border/glow in Slick Cyan-Purple-Emerald theme) */
+.rainbow-edge {
+  position: relative;
+}
+
+.rainbow-edge::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1.2px;
+  background: linear-gradient(135deg, 
+    rgba(34, 211, 238, 0.4), 
+    rgba(59, 130, 246, 0.4), 
+    rgba(168, 85, 247, 0.4), 
+    rgba(16, 185, 129, 0.3)
+  );
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  opacity: 0.9;
+}
+
+/* Super glossy liquid-glass pills and buttons */
+.liquid-glass-pill {
+  position: relative;
+  background: white;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1.5px solid rgba(0, 0, 0, 0.1);
+  border-radius: 9999px;
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.06),
+    inset 0 1px 2px rgba(255, 255, 255, 1);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  overflow: hidden;
+}
+
+/* Fix bg-gradient override for primary buttons */
+.liquid-glass-pill.bg-gradient-to-r {
+  background: linear-gradient(135deg, #06b6d4 0%, #2563eb 100%) !important;
+  border-color: rgba(255, 255, 255, 0.2) !important;
+  color: #ffffff !important;
+  box-shadow: 0 10px 30px -10px rgba(6, 182, 212, 0.5) !important;
+}
+
+.dark .liquid-glass-pill {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.03));
+  border: 1.5px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.35),
+    inset 0 1px 2px rgba(255, 255, 255, 0.1);
+}
+
+.dark .liquid-glass-pill.bg-gradient-to-r {
+  background: linear-gradient(135deg, #22d3ee 0%, #2563eb 100%) !important;
+  border-color: rgba(255, 255, 255, 0.15) !important;
+  color: #ffffff !important;
+  box-shadow: 0 10px 30px -10px rgba(6, 182, 212, 0.3) !important;
+}
+
+/* Reflection overlay gloss sheens */
+.sheen::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -150%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.4) 30%,
+    rgba(255, 255, 255, 0.6) 50%,
+    transparent 80%
+  );
+  transform: skewX(-25deg);
+  transition: none;
+}
+
+.sheen:hover::before {
+  left: 150%;
+  transition: all 0.8s ease-in-out;
+}
+
+/* Color accents with liquid feel */
+.glass-glow-orange {
+  box-shadow: 
+    0 10px 30px -5px rgba(249, 115, 22, 0.3),
+    inset 0 4px 12px rgba(255, 255, 255, 0.6),
+    inset 0 -2px 6px rgba(249, 115, 22, 0.2);
+  border-color: rgba(249, 115, 22, 0.4) !important;
+}
+
+.glass-glow-cyan {
+  box-shadow: 
+    0 10px 30px -5px rgba(6, 182, 212, 0.3),
+    inset 0 4px 12px rgba(255, 255, 255, 0.6),
+    inset 0 -2px 6px rgba(6, 182, 212, 0.2);
+  border-color: rgba(6, 182, 212, 0.4) !important;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(120, 120, 120, 0.2);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(120, 120, 120, 0.4);
+}
+
+.markdown-body h1, .markdown-body h2, .markdown-body h3 {
+  font-family: "Outfit", sans-serif;
+  font-weight: 600;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  color: inherit;
+}
+
+.markdown-body ul, .markdown-body ol {
+  list-style-type: disc;
+  margin-left: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.markdown-body li {
+  margin-bottom: 0.25rem;
+}
