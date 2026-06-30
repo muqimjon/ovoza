@@ -1,8 +1,0 @@
-{
-  "name": "Ovoza - Biznes Avtomatlashtirish",
-  "description": "Kichik va o'rta bizneslar uchun Liquid Glass dizaynidagi tahliliy va avtomatlashtirish xizmatlari landing sahifasi.",
-  "requestFramePermissions": [],
-  "majorCapabilities": [
-    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
-  ]
-}

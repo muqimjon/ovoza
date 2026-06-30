@@ -1,0 +1,156 @@
+import { ChangeDetectionStrategy, Component, computed, inject } from '@angular/core';
+import { I18nService } from '../../../../core/i18n/i18n.service';
+import { Locale } from '../../../../core/i18n/locale';
+import { Icon } from '../../../../shared/ui/icon';
+import { SectionHeading } from '../../../../shared/ui/section-heading';
+import { RevealDirective } from '../../../../shared/directives/reveal.directive';
+
+type Member = {
+  initials: string;
+  name: string;
+  role: string;
+  desc: string;
+  tagsIcon: string;
+  tags: string;
+};
+
+const CONTENT: Record<
+  Locale,
+  {
+    eyebrow: string;
+    title: string;
+    accent: string;
+    subtitle: string;
+    members: Member[];
+  }
+> = {
+  uz: {
+    eyebrow: 'Jamoa',
+    title: 'Sizning loyihangiz',
+    accent: 'orqasidagi jamoa',
+    subtitle:
+      'Biz shunchaki dasturchi emasmiz — jamoamizda 14 yildan ortiq amaliy biznes tajribasi bor. Sizning ishingizni ichidan tushunamiz va muammoni hal qiladigan tizim quramiz.',
+    members: [
+      {
+        initials: 'AS',
+        name: 'Avazbek Siddiqov',
+        role: 'Desktop & Mobile Developer',
+        desc: 'Kassada va omborda uzilmasdan ishlaydigan tezkor Windows dasturlarini quradi. Dala xodimlari va sotuvchilar uchun telefonda ishlaydigan ilovalar yaratadi.',
+        tagsIcon: 'smartphone',
+        tags: 'Windows • iOS • Android',
+      },
+      {
+        initials: 'MM',
+        name: 'Muqimjon Mamadaliyev',
+        role: 'Backend & Deployment',
+        desc: "Ma'lumotlaringiz xavfsizligi, serverlar tezligi va tizimlar o'zaro bog'lanishi uchun javobgar. Pul va mijoz ma'lumotlari hech qachon yo'qolmasligini ta'minlaydi.",
+        tagsIcon: 'server',
+        tags: 'Backend • DevOps • Cloud',
+      },
+    ],
+  },
+  ru: {
+    eyebrow: 'Команда',
+    title: 'Команда за',
+    accent: 'вашим проектом',
+    subtitle:
+      'Мы не просто программисты — за плечами команды более 14 лет реального опыта в бизнесе. Мы понимаем ваше дело изнутри и строим систему, которая решает задачу.',
+    members: [
+      {
+        initials: 'AS',
+        name: 'Авазбек Сиддиков',
+        role: 'Desktop & Mobile Developer',
+        desc: 'Создаёт быстрые программы для Windows, которые работают без сбоев на кассе и складе. Делает мобильные приложения для выездных сотрудников и продавцов.',
+        tagsIcon: 'smartphone',
+        tags: 'Windows • iOS • Android',
+      },
+      {
+        initials: 'MM',
+        name: 'Мукимжон Мамадалиев',
+        role: 'Backend & Deployment',
+        desc: 'Отвечает за безопасность ваших данных, скорость серверов и связку систем между собой. Гарантирует, что деньги и данные клиентов никогда не потеряются.',
+        tagsIcon: 'server',
+        tags: 'Backend • DevOps • Cloud',
+      },
+    ],
+  },
+  en: {
+    eyebrow: 'Team',
+    title: 'The team behind',
+    accent: 'your project',
+    subtitle:
+      'We are more than developers — the team brings over 14 years of hands-on business experience. We understand how your company really works and build a system that solves the real problem.',
+    members: [
+      {
+        initials: 'AS',
+        name: 'Avazbek Siddiqov',
+        role: 'Desktop & Mobile Developer',
+        desc: 'Builds fast, reliable installable Windows apps that keep running at the counter and in the warehouse. Creates cross-platform mobile apps for field staff and daily operations.',
+        tagsIcon: 'smartphone',
+        tags: 'Windows • iOS • Android',
+      },
+      {
+        initials: 'MM',
+        name: 'Muqimjon Mamadaliyev',
+        role: 'Backend & Deployment',
+        desc: 'Responsible for the security of your data, fast servers and systems that talk to each other. Makes sure money and client records are never lost.',
+        tagsIcon: 'server',
+        tags: 'Backend • DevOps • Cloud',
+      },
+    ],
+  },
+};
+
+@Component({
+  selector: 'app-team',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  imports: [Icon, SectionHeading, RevealDirective],
+  template: `
+    <section id="team" class="px-6 py-20 md:py-28">
+      <div class="mx-auto max-w-6xl">
+        <app-section-heading
+          [eyebrow]="c().eyebrow"
+          icon="users"
+          [title]="c().title"
+          [accent]="c().accent"
+          [subtitle]="c().subtitle"
+        />
+
+        <div class="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2">
+          @for (m of c().members; track m.initials) {
+            <div appReveal [appReveal]="120" class="glass rainbow-edge rounded-3xl p-7">
+              <div class="flex items-center gap-4">
+                <div
+                  class="grid h-16 w-16 shrink-0 place-items-center rounded-full bg-brand-gradient text-xl font-black text-white shadow-[var(--shadow-glow)]"
+                >
+                  {{ m.initials }}
+                </div>
+                <div>
+                  <h3 class="text-lg font-bold text-slate-900 dark:text-white">{{ m.name }}</h3>
+                  <p class="mt-1 font-mono text-xs uppercase tracking-wide text-cyan-600 dark:text-cyan-400">
+                    {{ m.role }}
+                  </p>
+                </div>
+              </div>
+
+              <p class="mt-5 text-sm leading-relaxed text-slate-600 dark:text-slate-400">
+                {{ m.desc }}
+              </p>
+
+              <div
+                class="mt-6 flex items-center gap-2 border-t border-slate-200/70 pt-4 text-sm font-medium text-slate-500 dark:border-white/10"
+              >
+                <app-icon [name]="m.tagsIcon" [size]="18" />
+                <span>{{ m.tags }}</span>
+              </div>
+            </div>
+          }
+        </div>
+      </div>
+    </section>
+  `,
+})
+export class Team {
+  protected readonly i18n = inject(I18nService);
+  protected readonly c = computed(() => CONTENT[this.i18n.locale()]);
+}
