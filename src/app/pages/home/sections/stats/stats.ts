@@ -15,19 +15,19 @@ interface Stat {
 const CONTENT: Record<Locale, Stat[]> = {
   uz: [
     { icon: 'calendar', n: 14, suffix: '+', label: 'yillik amaliy tajriba' },
-    { icon: 'building', n: 46, suffix: '', label: 'avtomatlashtirilgan filial' },
+    { icon: 'building', n: 46, suffix: '', label: "filialli mijoz tarmogʻi ishonchi" },
     { icon: 'trendingUp', n: 3, suffix: '×', label: 'xodimlar unumdorligi' },
     { icon: 'fileChart', n: 5, suffix: '×', label: 'kamroq hujjatbozlik' },
   ],
   ru: [
     { icon: 'calendar', n: 14, suffix: '+', label: 'лет практического опыта' },
-    { icon: 'building', n: 46, suffix: '', label: 'автоматизированных филиалов' },
+    { icon: 'building', n: 46, suffix: '', label: 'филиалов в сети клиента' },
     { icon: 'trendingUp', n: 3, suffix: '×', label: 'рост продуктивности' },
     { icon: 'fileChart', n: 5, suffix: '×', label: 'меньше бумажной работы' },
   ],
   en: [
     { icon: 'calendar', n: 14, suffix: '+', label: 'years of hands-on experience' },
-    { icon: 'building', n: 46, suffix: '', label: 'automated branches' },
+    { icon: 'building', n: 46, suffix: '', label: 'branches in a client network' },
     { icon: 'trendingUp', n: 3, suffix: '×', label: 'staff productivity' },
     { icon: 'fileChart', n: 5, suffix: '×', label: 'less paperwork' },
   ],

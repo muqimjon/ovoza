@@ -29,13 +29,13 @@ const CONTENT: Record<
     title: 'Sizning loyihangiz',
     accent: 'orqasidagi jamoa',
     subtitle:
-      'Biz shunchaki dasturchi emasmiz — jamoamizda 14 yildan ortiq amaliy biznes tajribasi bor. Sizning ishingizni ichidan tushunamiz va muammoni hal qiladigan tizim quramiz.',
+      'Biz shunchaki dasturchi emasmiz — jamoamizda 14 yildan ortiq amaliy biznes tajribasi bor. Har bir loyihada mas’uliyat aniq bo‘linadi: biri siz har kuni ko‘radigan ilovalarni, biri ma’lumot va serverlar ishonchini bo‘yniga oladi.',
     members: [
       {
         initials: 'AS',
         name: 'Avazbek Siddiqov',
         role: 'Desktop & Mobile Developer',
-        desc: 'Kassada va omborda uzilmasdan ishlaydigan tezkor Windows dasturlarini quradi. Dala xodimlari va sotuvchilar uchun telefonda ishlaydigan ilovalar yaratadi.',
+        desc: 'Loyihaning mijoz har kuni ko‘radigan qismiga javobgar: kassa va omborda uzilmay ishlaydigan Windows dasturlari hamda dala xodimlari va sotuvchilar uchun mobil ilovalar. Foydalanuvchi qulayligi va tezligi uning zimmasida.',
         tagsIcon: 'smartphone',
         tags: 'Windows • iOS • Android',
       },
@@ -54,13 +54,13 @@ const CONTENT: Record<
     title: 'Команда за',
     accent: 'вашим проектом',
     subtitle:
-      'Мы не просто программисты — за плечами команды более 14 лет реального опыта в бизнесе. Мы понимаем ваше дело изнутри и строим систему, которая решает задачу.',
+      'Мы не просто программисты — за плечами команды более 14 лет реального опыта в бизнесе. В каждом проекте ответственность чётко разделена: один отвечает за приложения, которые вы видите каждый день, другой — за надёжность данных и серверов.',
     members: [
       {
         initials: 'AS',
         name: 'Авазбек Сиддиков',
         role: 'Desktop & Mobile Developer',
-        desc: 'Создаёт быстрые программы для Windows, которые работают без сбоев на кассе и складе. Делает мобильные приложения для выездных сотрудников и продавцов.',
+        desc: 'Отвечает за ту часть проекта, которую клиент видит каждый день: настольные Windows-программы, работающие без сбоев на кассе и складе, и мобильные приложения для выездных сотрудников и продавцов. Удобство и скорость для пользователя — на нём.',
         tagsIcon: 'smartphone',
         tags: 'Windows • iOS • Android',
       },
@@ -79,13 +79,13 @@ const CONTENT: Record<
     title: 'The team behind',
     accent: 'your project',
     subtitle:
-      'We are more than developers — the team brings over 14 years of hands-on business experience. We understand how your company really works and build a system that solves the real problem.',
+      'We are more than developers — the team brings over 14 years of hands-on business experience. On every project responsibility is split clearly: one owns the apps you see every day, the other owns the reliability of your data and servers.',
     members: [
       {
         initials: 'AS',
         name: 'Avazbek Siddiqov',
         role: 'Desktop & Mobile Developer',
-        desc: 'Builds fast, reliable installable Windows apps that keep running at the counter and in the warehouse. Creates cross-platform mobile apps for field staff and daily operations.',
+        desc: 'Owns the part of the project the client touches every day: reliable Windows apps that never stall at the counter or in the warehouse, plus mobile apps for field staff and sellers. The user’s speed and comfort are his responsibility.',
         tagsIcon: 'smartphone',
         tags: 'Windows • iOS • Android',
       },

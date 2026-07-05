@@ -31,13 +31,13 @@ const CONTENT: Record<Locale, {
     cases: [
       {
         icon: 'building',
-        tag: 'CRM + Ombor',
+        tag: 'Ombor + Barkod',
         company: 'Bekson Shoes',
         location: "Farg'ona, Uchko'prik",
         challenge: "Poyabzal zavodi ombor, savdo, to'lov va mijoz hisob-kitoblarini qo'lda, daftarda yuritardi — vaqt ketardi, xatolar bo'lardi.",
-        solution: ['Ombor', 'Savdo', "To'lovlar", 'Mijozlar'],
+        solution: ['Barkod', 'Ombor', 'Savdo', 'Qaytarish'],
         metric: 'Bir necha barobar tez',
-        result: "Hisobot va material kirim-chiqimi bir necha barobar tezlashdi, barcha jarayon to'liq shaffof bo'ldi.",
+        result: "Barkod tizimi bilan tayyor mahsulot kirimi, sotuv va qaytarishlar osonlashdi — hisob-kitob to'liq shaffof va bir necha barobar tez bo'ldi.",
       },
       {
         icon: 'building',
@@ -53,7 +53,7 @@ const CONTENT: Record<Locale, {
         icon: 'landmark',
         tag: 'KPI + Call-markaz',
         company: 'HAMROH',
-        location: "O'zbekiston bo'ylab 46 filial",
+        location: "Markaziy call-markaz · 46 filialli tarmoq",
         challenge: "Mikromoliya tashkiloti call-markaz va xodimlar samaradorligini o'lchay olmasdi — kim qancha ishlayotgani noma'lum edi.",
         solution: ['KPI', 'Call-markaz', 'Dashboard'],
         metric: 'Samaradorlik 3× oshdi',
@@ -71,13 +71,13 @@ const CONTENT: Record<Locale, {
     cases: [
       {
         icon: 'building',
-        tag: 'CRM + Склад',
+        tag: 'Склад + Штрихкод',
         company: 'Bekson Shoes',
         location: 'Фергана, Учкуприк',
         challenge: 'Обувная фабрика вела склад, продажи, платежи и расчёты с клиентами вручную, в тетрадях — уходило время и появлялись ошибки.',
-        solution: ['Склад', 'Продажи', 'Платежи', 'Клиенты'],
+        solution: ['Штрихкод', 'Склад', 'Продажи', 'Возвраты'],
         metric: 'В несколько раз быстрее',
-        result: 'Отчётность и учёт прихода-расхода материалов ускорились в несколько раз, все процессы стали полностью прозрачными.',
+        result: 'Со штрихкодовой системой приём готовой продукции, продажи и возвраты упростились — учёт стал полностью прозрачным и в разы быстрее.',
       },
       {
         icon: 'building',
@@ -93,7 +93,7 @@ const CONTENT: Record<Locale, {
         icon: 'landmark',
         tag: 'KPI + Колл-центр',
         company: 'HAMROH',
-        location: '46 филиалов по Узбекистану',
+        location: 'Центральный колл-центр · сеть из 46 филиалов',
         challenge: 'Микрофинансовая организация не могла измерить эффективность колл-центра и сотрудников — было неясно, кто сколько работает.',
         solution: ['KPI', 'Колл-центр', 'Dashboard'],
         metric: 'Эффективность выросла в 3×',
@@ -111,13 +111,13 @@ const CONTENT: Record<Locale, {
     cases: [
       {
         icon: 'building',
-        tag: 'CRM + Inventory',
+        tag: 'Inventory + Barcode',
         company: 'Bekson Shoes',
         location: 'Fergana, Uchkuprik',
         challenge: 'The footwear factory ran inventory, sales, payments and customer ledgers by hand in paper books — slow and error-prone.',
-        solution: ['Inventory', 'Sales', 'Payments', 'Clients'],
+        solution: ['Barcode', 'Inventory', 'Sales', 'Returns'],
         metric: 'Several times faster',
-        result: 'Reporting and material in/out tracking became several times faster, with every process fully transparent.',
+        result: 'With the barcode system, receiving finished goods, sales and returns became easy — accounting is fully transparent and several times faster.',
       },
       {
         icon: 'building',
@@ -133,7 +133,7 @@ const CONTENT: Record<Locale, {
         icon: 'landmark',
         tag: 'KPI + Call center',
         company: 'HAMROH',
-        location: '46 branches across Uzbekistan',
+        location: 'Central call center · 46-branch network',
         challenge: 'The microfinance organization could not measure call-center and staff performance — no one knew who did how much.',
         solution: ['KPI', 'Call center', 'Dashboard'],
         metric: 'Productivity up 3×',

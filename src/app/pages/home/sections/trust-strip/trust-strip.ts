@@ -9,7 +9,7 @@ type Client = { name: string; industry: string; icon: string };
 const CONTENT: Record<Locale, { eyebrow: string; stat: string; clients: Client[] }> = {
   uz: {
     eyebrow: 'Bizga ishonch bildirgan korxonalar',
-    stat: '46+ filial avtomatlashtirildi',
+    stat: '46 filialli tarmoq bizga ishonadi',
     clients: [
       { name: 'Bekson Shoes', industry: 'Oyoq kiyim ishlab chiqarish zavodi', icon: 'building' },
       { name: 'AL-MANSUR', industry: 'Kabel ishlab chiqarish zavodi', icon: 'building' },
@@ -18,7 +18,7 @@ const CONTENT: Record<Locale, { eyebrow: string; stat: string; clients: Client[]
   },
   ru: {
     eyebrow: 'Нам доверяют',
-    stat: '46+ филиалов автоматизировано',
+    stat: 'Нам доверяет сеть из 46 филиалов',
     clients: [
       { name: 'Bekson Shoes', industry: 'Завод по производству обуви', icon: 'building' },
       { name: 'AL-MANSUR', industry: 'Кабельный завод', icon: 'building' },
@@ -27,7 +27,7 @@ const CONTENT: Record<Locale, { eyebrow: string; stat: string; clients: Client[]
   },
   en: {
     eyebrow: 'Trusted by',
-    stat: '46+ branches automated',
+    stat: 'Trusted by a 46-branch network',
     clients: [
       { name: 'Bekson Shoes', industry: 'Footwear manufacturing factory', icon: 'building' },
       { name: 'AL-MANSUR', industry: 'Cable manufacturing factory', icon: 'building' },

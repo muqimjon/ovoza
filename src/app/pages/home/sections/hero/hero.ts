@@ -22,7 +22,7 @@ const CONTENT: Record<Locale, {
     oneTime: "Bir martalik to'lov — oylik obuna yo'q",
     stats: [
       { n: 14, suffix: '+', label: 'yillik tajriba' },
-      { n: 46, suffix: '', label: 'avtomatlashtirilgan filial' },
+      { n: 46, suffix: '', label: "filialli mijoz tarmogʻi" },
       { n: 100, suffix: '%', label: 'sizga moslashtirilgan' },
     ],
     panel: { app: 'Ovoza CRM', live: 'Jonli', revenue: 'Tushum', orders: 'Buyurtma', clients: 'Mijoz', weekly: 'Haftalik savdo', target: 'KPI bajarildi' },
@@ -38,7 +38,7 @@ const CONTENT: Record<Locale, {
     oneTime: 'Разовая оплата — без ежемесячной подписки',
     stats: [
       { n: 14, suffix: '+', label: 'лет опыта' },
-      { n: 46, suffix: '', label: 'автоматизированных филиалов' },
+      { n: 46, suffix: '', label: 'филиалов в сети клиента' },
       { n: 100, suffix: '%', label: 'под ваш бизнес' },
     ],
     panel: { app: 'Ovoza CRM', live: 'Онлайн', revenue: 'Выручка', orders: 'Заказы', clients: 'Клиенты', weekly: 'Продажи за неделю', target: 'KPI выполнен' },
@@ -54,7 +54,7 @@ const CONTENT: Record<Locale, {
     oneTime: 'One-time payment — no monthly subscription',
     stats: [
       { n: 14, suffix: '+', label: 'years of experience' },
-      { n: 46, suffix: '', label: 'automated branches' },
+      { n: 46, suffix: '', label: 'branches in a client network' },
       { n: 100, suffix: '%', label: 'tailored to you' },
     ],
     panel: { app: 'Ovoza CRM', live: 'Live', revenue: 'Revenue', orders: 'Orders', clients: 'Clients', weekly: 'Weekly sales', target: 'KPI reached' },

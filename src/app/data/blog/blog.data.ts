@@ -1337,7 +1337,7 @@ export const ARTICLES: BlogArticle[] = [
           },
           {
             "type": "quote",
-            "text": "HAMROH mikromoliya tashkilotida 46 filial bo'ylab call-markaz KPI joriy etilgach, operatorlar unumdorligi taxminan uch baravar oshdi — chunki har kim o'z raqamini ko'rdi va bonus real natijaga bog'landi."
+            "text": "46 filialli HAMROH mikromoliya tashkilotining markaziy call-markazida KPI joriy etilgach, operatorlar unumdorligi taxminan uch baravar oshdi — chunki har kim o'z raqamini ko'rdi va bonus real natijaga bog'landi."
           },
           {
             "type": "h2",
@@ -1444,7 +1444,7 @@ export const ARTICLES: BlogArticle[] = [
           },
           {
             "type": "quote",
-            "text": "В микрофинансовой организации HAMROH после внедрения KPI колл-центра по 46 филиалам продуктивность операторов выросла примерно втрое — потому что каждый увидел свою цифру, а бонус привязали к реальному результату."
+            "text": "В центральном колл-центре микрофинансовой организации HAMROH (сеть из 46 филиалов) после внедрения KPI продуктивность операторов выросла примерно втрое — потому что каждый увидел свою цифру, а бонус привязали к реальному результату."
           },
           {
             "type": "h2",
@@ -1551,7 +1551,7 @@ export const ARTICLES: BlogArticle[] = [
           },
           {
             "type": "quote",
-            "text": "At the microfinance organization HAMROH, after call center KPI was rolled out across 46 branches, operator productivity rose roughly threefold — because each person saw their own number and the bonus was tied to real results."
+            "text": "At HAMROH, a microfinance organization with a 46-branch network, after call center KPI was rolled out at its central call center, operator productivity rose roughly threefold — because each person saw their own number and the bonus was tied to real results."
           },
           {
             "type": "h2",
