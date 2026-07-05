@@ -1,7 +1,7 @@
 export const SITE = {
   name: 'Ovoza',
   legalName: 'Ovoza Dasturlar',
-  baseUrl: 'https://ovoza.pages.dev',
+  baseUrl: 'https://idea-up.uz',
   phone: '+998973340334',
   phoneDisplay: '+998 97 334 03 34',
   email: 'ovozadasturlar@gmail.com',

@@ -2,7 +2,7 @@ import { writeFileSync, mkdirSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 
-const BASE = process.env.APP_BASE_URL || 'https://ovoza.pages.dev';
+const BASE = process.env.APP_BASE_URL || 'https://idea-up.uz';
 const LOCALES = ['uz', 'ru', 'en'];
 const SLUGS = [
   'biznesni-avtomatlashtirish-nimadan-boshlanadi',
