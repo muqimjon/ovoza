@@ -66,6 +66,7 @@ export const onRequestPost = async (context: {
   }
   add('🌐', body.lang);
 
+  const debug = new URL(request.url).searchParams.get('debug') === '1';
   try {
     const tg = await fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
       method: 'POST',
@@ -78,10 +79,13 @@ export const onRequestPost = async (context: {
       }),
     });
     if (!tg.ok) {
-      return json(502, { ok: false });
+      const detail = await tg.text().catch(() => '');
+      console.error('telegram sendMessage failed', tg.status, detail);
+      return json(502, debug ? { ok: false, status: tg.status, detail } : { ok: false });
     }
     return json(200, { ok: true });
-  } catch {
-    return json(502, { ok: false });
+  } catch (e) {
+    console.error('lead handler error', e);
+    return json(502, debug ? { ok: false, error: String(e) } : { ok: false });
   }
 };
