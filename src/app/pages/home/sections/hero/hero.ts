@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, computed, inject } from '@angular/core';
+import { afterNextRender, ChangeDetectionStrategy, Component, computed, DestroyRef, inject, signal, WritableSignal } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { I18nService } from '../../../../core/i18n/i18n.service';
 import { Locale } from '../../../../core/i18n/locale';
@@ -128,17 +128,17 @@ const CONTENT: Record<Locale, {
             <div class="mt-4 grid grid-cols-3 gap-3">
               <div class="rounded-2xl bg-cyan-500/10 p-3">
                 <p class="text-[10px] font-semibold uppercase text-cyan-700 dark:text-cyan-300">{{ c().panel.revenue }}</p>
-                <p class="mt-1 font-display text-lg font-black text-slate-900 dark:text-white">24M</p>
+                <p class="mt-1 font-display text-lg font-black text-slate-900 dark:text-white">{{ revenue() }}M</p>
                 <p class="text-[10px] font-bold text-emerald-500">▲ 18%</p>
               </div>
               <div class="rounded-2xl bg-indigo-500/10 p-3">
                 <p class="text-[10px] font-semibold uppercase text-indigo-600 dark:text-indigo-300">{{ c().panel.orders }}</p>
-                <p class="mt-1 font-display text-lg font-black text-slate-900 dark:text-white">312</p>
+                <p class="mt-1 font-display text-lg font-black text-slate-900 dark:text-white">{{ orders() }}</p>
                 <p class="text-[10px] font-bold text-emerald-500">▲ 9%</p>
               </div>
               <div class="rounded-2xl bg-emerald-500/10 p-3">
                 <p class="text-[10px] font-semibold uppercase text-emerald-600 dark:text-emerald-300">{{ c().panel.clients }}</p>
-                <p class="mt-1 font-display text-lg font-black text-slate-900 dark:text-white">1 280</p>
+                <p class="mt-1 font-display text-lg font-black text-slate-900 dark:text-white">{{ clientsText() }}</p>
                 <p class="text-[10px] font-bold text-emerald-500">▲ 24%</p>
               </div>
             </div>
@@ -149,7 +149,7 @@ const CONTENT: Record<Locale, {
                 <app-icon name="trendingUp" [size]="16" />
               </div>
               <div class="mt-3 flex h-24 items-end gap-2">
-                @for (b of bars; track $index) {
+                @for (b of bars(); track $index) {
                   <div class="hero-bar flex-1 rounded-t-md bg-gradient-to-t from-cyan-500 to-indigo-400 opacity-90"
                        [style.height.%]="b" [style.animation-delay.ms]="$index * 90"></div>
                 }
@@ -159,11 +159,11 @@ const CONTENT: Record<Locale, {
             <div class="mt-4 flex items-center gap-3 rounded-2xl bg-slate-900/[0.03] p-3 dark:bg-white/5">
               <svg width="44" height="44" viewBox="0 0 44 44" class="-rotate-90">
                 <circle cx="22" cy="22" r="18" fill="none" stroke="currentColor" stroke-width="5" class="text-slate-200 dark:text-white/10" />
-                <circle cx="22" cy="22" r="18" fill="none" stroke="url(#ring)" stroke-width="5" stroke-linecap="round" stroke-dasharray="113" stroke-dashoffset="22" />
+                <circle cx="22" cy="22" r="18" fill="none" stroke="url(#ring)" stroke-width="5" stroke-linecap="round" stroke-dasharray="113" [attr.stroke-dashoffset]="ringOffset()" />
                 <defs><linearGradient id="ring" x1="0" y1="0" x2="44" y2="44"><stop stop-color="#06b6d4" /><stop offset="1" stop-color="#4f46e5" /></linearGradient></defs>
               </svg>
               <div>
-                <p class="font-display text-lg font-black text-slate-900 dark:text-white">80%</p>
+                <p class="font-display text-lg font-black text-slate-900 dark:text-white">{{ kpi() }}%</p>
                 <p class="text-[11px] text-slate-500 dark:text-slate-400">{{ c().panel.target }}</p>
               </div>
             </div>
@@ -173,13 +173,52 @@ const CONTENT: Record<Locale, {
     </section>
   `,
   styles: [`
-    .hero-bar { animation: grow 1.1s cubic-bezier(0.16, 1, 0.3, 1) both; }
+    .hero-bar { animation: grow 1.1s cubic-bezier(0.16, 1, 0.3, 1) both; transition: height 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
     @keyframes grow { from { height: 0; } }
-    @media (prefers-reduced-motion: reduce) { .hero-bar { animation: none; } }
+    @media (prefers-reduced-motion: reduce) { .hero-bar { animation: none; transition: none; } }
   `],
 })
 export class Hero {
+  private readonly destroyRef = inject(DestroyRef);
   protected readonly i18n = inject(I18nService);
   protected readonly c = computed(() => CONTENT[this.i18n.locale()]);
-  protected readonly bars = [45, 62, 50, 78, 68, 92, 84];
+
+  protected readonly revenue = signal(24);
+  protected readonly orders = signal(312);
+  protected readonly clients = signal(1280);
+  protected readonly kpi = signal(80);
+  protected readonly bars = signal([45, 62, 50, 78, 68, 92, 84]);
+
+  protected readonly clientsText = computed(() =>
+    this.clients().toLocaleString('en-US').replace(/,/g, ' '),
+  );
+  protected readonly ringOffset = computed(() => 113 * (1 - this.kpi() / 100));
+
+  constructor() {
+    afterNextRender(() => {
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      this.animate(this.revenue, 0, 24, 1400);
+      this.animate(this.orders, 0, 312, 1600);
+      this.animate(this.clients, 0, 1280, 1600);
+      const id = setInterval(() => this.tick(), 2800);
+      this.destroyRef.onDestroy(() => clearInterval(id));
+    });
+  }
+
+  private animate(sig: WritableSignal<number>, from: number, to: number, duration: number): void {
+    const start = performance.now();
+    sig.set(from);
+    const step = (now: number) => {
+      const p = Math.min(1, (now - start) / duration);
+      sig.set(Math.round(from + (to - from) * (1 - Math.pow(1 - p, 3))));
+      if (p < 1) requestAnimationFrame(step);
+    };
+    requestAnimationFrame(step);
+  }
+
+  private tick(): void {
+    this.orders.update((v) => v + 1 + Math.floor(Math.random() * 4));
+    this.clients.update((v) => v + Math.floor(Math.random() * 5));
+    this.bars.update((arr) => [...arr.slice(1), 40 + Math.floor(Math.random() * 55)]);
+  }
 }
