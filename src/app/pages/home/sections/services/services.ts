@@ -3,6 +3,7 @@ import { RouterLink } from '@angular/router';
 import { I18nService } from '../../../../core/i18n/i18n.service';
 import { Locale } from '../../../../core/i18n/locale';
 import { RevealDirective } from '../../../../shared/directives/reveal.directive';
+import { TiltDirective } from '../../../../shared/directives/tilt.directive';
 import { Icon } from '../../../../shared/ui/icon';
 import { SectionHeading } from '../../../../shared/ui/section-heading';
 
@@ -65,7 +66,7 @@ const CONTENT: Record<Locale, { eyebrow: string; title: string; accent: string; 
 @Component({
   selector: 'app-services',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [RouterLink, Icon, SectionHeading, RevealDirective],
+  imports: [RouterLink, Icon, SectionHeading, RevealDirective, TiltDirective],
   template: `
     <section id="services" class="px-6 py-20 md:py-28">
       <div class="mx-auto max-w-6xl">
@@ -88,7 +89,7 @@ const CONTENT: Record<Locale, { eyebrow: string; title: string; accent: string; 
             }
           </div>
 
-          <div class="glass-strong rainbow-edge mt-8 grid gap-8 rounded-3xl p-8 md:grid-cols-2 md:p-10">
+          <div appTilt class="glass-strong rainbow-edge mt-8 grid gap-8 rounded-3xl p-8 md:grid-cols-2 md:p-10">
             <div>
               <div class="grid h-14 w-14 place-items-center rounded-2xl bg-cyan-500/10 text-cyan-600 dark:text-cyan-400">
                 <app-icon [name]="current().icon" [size]="28" />

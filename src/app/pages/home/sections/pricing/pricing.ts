@@ -5,6 +5,7 @@ import { Locale } from '../../../../core/i18n/locale';
 import { Icon } from '../../../../shared/ui/icon';
 import { SectionHeading } from '../../../../shared/ui/section-heading';
 import { RevealDirective } from '../../../../shared/directives/reveal.directive';
+import { TiltDirective } from '../../../../shared/directives/tilt.directive';
 
 type Step = { num: string; icon: string; title: string; text: string };
 
@@ -138,7 +139,7 @@ const CONTENT: Record<
 @Component({
   selector: 'app-pricing',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [RouterLink, Icon, SectionHeading, RevealDirective],
+  imports: [RouterLink, Icon, SectionHeading, RevealDirective, TiltDirective],
   template: `
     <section id="pricing" class="px-6 py-20 md:py-28">
       <div class="mx-auto max-w-6xl">
@@ -155,6 +156,7 @@ const CONTENT: Record<
             <div
               appReveal
               [appReveal]="$index * 120"
+              appTilt
               class="glass rainbow-edge relative flex flex-col rounded-2xl p-6"
             >
               <span

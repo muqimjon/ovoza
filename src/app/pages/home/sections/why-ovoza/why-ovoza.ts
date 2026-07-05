@@ -2,6 +2,7 @@ import { ChangeDetectionStrategy, Component, computed, inject } from '@angular/c
 import { I18nService } from '../../../../core/i18n/i18n.service';
 import { Locale } from '../../../../core/i18n/locale';
 import { RevealDirective } from '../../../../shared/directives/reveal.directive';
+import { TiltDirective } from '../../../../shared/directives/tilt.directive';
 import { Icon } from '../../../../shared/ui/icon';
 import { SectionHeading } from '../../../../shared/ui/section-heading';
 
@@ -102,7 +103,7 @@ const CONTENT: Record<Locale, {
 @Component({
   selector: 'app-why-ovoza',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [SectionHeading, Icon, RevealDirective],
+  imports: [SectionHeading, Icon, RevealDirective, TiltDirective],
   template: `
     <section id="advantages" class="px-6 py-20 md:py-28">
       <div class="mx-auto max-w-6xl">
@@ -116,7 +117,7 @@ const CONTENT: Record<Locale, {
 
         <div class="mt-14 grid gap-6 sm:grid-cols-2">
           @for (f of c().features; track f.title) {
-            <div appReveal [appReveal]="$index * 100" class="glass rainbow-edge group rounded-3xl p-7">
+            <div appReveal [appReveal]="$index * 100" appTilt class="glass rainbow-edge group rounded-3xl p-7">
               <div class="grid h-14 w-14 place-items-center rounded-2xl bg-cyan-500/10 text-cyan-600 transition-transform group-hover:scale-110 dark:text-cyan-400">
                 <app-icon [name]="f.icon" [size]="26" />
               </div>

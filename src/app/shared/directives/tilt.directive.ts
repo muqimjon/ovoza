@@ -20,7 +20,7 @@ export class TiltDirective {
         const py = (e.clientY - r.top) / r.height - 0.5;
         cancelAnimationFrame(raf);
         raf = requestAnimationFrame(() => {
-          node.style.transform = `perspective(900px) rotateY(${px * 6}deg) rotateX(${-py * 6}deg)`;
+          node.style.transform = `perspective(800px) rotateY(${px * 9}deg) rotateX(${-py * 9}deg)`;
         });
       };
       const onLeave = () => {

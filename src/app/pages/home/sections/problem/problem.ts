@@ -4,6 +4,7 @@ import { Locale } from '../../../../core/i18n/locale';
 import { Icon } from '../../../../shared/ui/icon';
 import { SectionHeading } from '../../../../shared/ui/section-heading';
 import { RevealDirective } from '../../../../shared/directives/reveal.directive';
+import { TiltDirective } from '../../../../shared/directives/tilt.directive';
 
 type Pain = { icon: string; title: string; text: string };
 
@@ -136,7 +137,7 @@ const CONTENT: Record<Locale, {
 @Component({
   selector: 'app-problem',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [Icon, SectionHeading, RevealDirective],
+  imports: [Icon, SectionHeading, RevealDirective, TiltDirective],
   template: `
     <section id="problem" class="px-6 py-20 md:py-28">
       <div class="mx-auto max-w-6xl">
@@ -152,6 +153,7 @@ const CONTENT: Record<Locale, {
           @for (pain of c().pains; track pain.title; let i = $index) {
             <div
               [appReveal]="i * 90"
+              appTilt
               class="glass rainbow-edge rounded-2xl p-6"
             >
               <div
