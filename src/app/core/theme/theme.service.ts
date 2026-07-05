@@ -14,7 +14,10 @@ export class ThemeService {
   toggle(): void {
     const next = this.theme() === 'dark' ? 'light' : 'dark';
     this.theme.set(next);
-    this.doc.documentElement.classList.toggle('dark', next === 'dark');
+    const el = this.doc.documentElement;
+    el.classList.toggle('dark', next === 'dark');
+    el.style.colorScheme = next === 'dark' ? 'dark' : 'light';
+    el.style.backgroundColor = next === 'dark' ? '#080a0f' : '#f7f9fc';
     try {
       localStorage.setItem('ovoza-theme', next);
     } catch {}
