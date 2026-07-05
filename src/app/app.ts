@@ -2,6 +2,7 @@ import { ChangeDetectionStrategy, Component, inject, DOCUMENT } from '@angular/c
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { ActivatedRoute, NavigationEnd, Router, RouterOutlet } from '@angular/router';
 import { filter } from 'rxjs';
+import { AnalyticsService } from './core/analytics/analytics.service';
 import { I18nService } from './core/i18n/i18n.service';
 import { LOCALE_HTML_LANG } from './core/i18n/locale';
 import { Header } from './shared/layout/header';
@@ -23,9 +24,11 @@ export class App {
   private readonly router = inject(Router);
   private readonly route = inject(ActivatedRoute);
   private readonly doc = inject(DOCUMENT);
+  private readonly analytics = inject(AnalyticsService);
   protected readonly i18n = inject(I18nService);
 
   constructor() {
+    this.analytics.init();
     this.syncLocale();
     this.router.events
       .pipe(
