@@ -212,7 +212,7 @@ export class Hero {
   }
 
   private tick(): void {
-    this.orders.update((v) => v + 1 + Math.floor(Math.random() * 3));
-    this.clients.update((v) => v + Math.floor(Math.random() * 4));
+    this.orders.update((v) => v + 1 + Math.floor(Math.random() * 2));
+    this.clients.update((v) => v + 1 + Math.floor(Math.random() * 2));
   }
 }

@@ -26,10 +26,12 @@ interface Cell {
     .roll { display: inline-flex; font-variant-numeric: tabular-nums; }
     .roll-col { position: relative; display: inline-block; overflow: hidden; line-height: 1.15; }
     .roll-cur { display: inline-block; }
-    .roll-cur.a, .roll-cur.b { animation: roll-in 1.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
-    .roll-prev { position: absolute; left: 0; top: 0; animation: roll-out 1.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
-    @keyframes roll-in { from { transform: translateY(90%); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
-    @keyframes roll-out { from { transform: translateY(0); opacity: 1; } to { transform: translateY(-90%); opacity: 0; } }
+    .roll-cur.a { animation: roll-in-a 1.7s cubic-bezier(0.22, 1, 0.36, 1) both; }
+    .roll-cur.b { animation: roll-in-b 1.7s cubic-bezier(0.22, 1, 0.36, 1) both; }
+    .roll-prev { position: absolute; left: 0; top: 0; animation: roll-out 1.7s cubic-bezier(0.22, 1, 0.36, 1) both; }
+    @keyframes roll-in-a { from { transform: translateY(100%); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+    @keyframes roll-in-b { from { transform: translateY(100%); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+    @keyframes roll-out { from { transform: translateY(0); opacity: 1; } to { transform: translateY(-100%); opacity: 0; } }
     @media (prefers-reduced-motion: reduce) {
       .roll-cur.a, .roll-cur.b { animation: none; }
       .roll-prev { display: none; }

@@ -76,7 +76,7 @@ const CONTENT: Record<
             target="_blank"
             rel="noopener"
             [attr.aria-label]="c().follow + ' — ' + c().instagram"
-            class="glass rainbow-edge sheen group flex flex-col items-center rounded-2xl p-6 text-center transition-transform hover:scale-[1.03]"
+            class="glass rainbow-edge sheen group flex flex-col items-center rounded-2xl p-6 text-center transition-transform duration-300 ease-out hover:-translate-y-1.5 hover:scale-[1.02]"
             appReveal
           >
             <div class="grid h-14 w-14 place-items-center rounded-2xl bg-pink-500/10 text-pink-500">
@@ -91,7 +91,7 @@ const CONTENT: Record<
             target="_blank"
             rel="noopener"
             [attr.aria-label]="c().follow + ' — ' + c().telegram"
-            class="glass rainbow-edge sheen group flex flex-col items-center rounded-2xl p-6 text-center transition-transform hover:scale-[1.03]"
+            class="glass rainbow-edge sheen group flex flex-col items-center rounded-2xl p-6 text-center transition-transform duration-300 ease-out hover:-translate-y-1.5 hover:scale-[1.02]"
             [appReveal]="120"
           >
             <div class="grid h-14 w-14 place-items-center rounded-2xl bg-cyan-500/10 text-cyan-500">
@@ -106,7 +106,7 @@ const CONTENT: Record<
             target="_blank"
             rel="noopener"
             [attr.aria-label]="c().follow + ' — ' + c().linkedin"
-            class="glass rainbow-edge sheen group flex flex-col items-center rounded-2xl p-6 text-center transition-transform hover:scale-[1.03]"
+            class="glass rainbow-edge sheen group flex flex-col items-center rounded-2xl p-6 text-center transition-transform duration-300 ease-out hover:-translate-y-1.5 hover:scale-[1.02]"
             [appReveal]="240"
           >
             <div class="grid h-14 w-14 place-items-center rounded-2xl bg-blue-600/10 text-blue-600">
@@ -121,7 +121,7 @@ const CONTENT: Record<
             target="_blank"
             rel="noopener"
             [attr.aria-label]="c().follow + ' — ' + c().youtube"
-            class="glass rainbow-edge sheen group flex flex-col items-center rounded-2xl p-6 text-center transition-transform hover:scale-[1.03]"
+            class="glass rainbow-edge sheen group flex flex-col items-center rounded-2xl p-6 text-center transition-transform duration-300 ease-out hover:-translate-y-1.5 hover:scale-[1.02]"
             [appReveal]="360"
           >
             <div class="grid h-14 w-14 place-items-center rounded-2xl bg-red-500/10 text-red-500">
