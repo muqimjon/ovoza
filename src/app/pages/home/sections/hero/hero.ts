@@ -1,9 +1,10 @@
-import { afterNextRender, ChangeDetectionStrategy, Component, computed, DestroyRef, inject, signal, WritableSignal } from '@angular/core';
+import { afterNextRender, ChangeDetectionStrategy, Component, computed, DestroyRef, inject, signal } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { I18nService } from '../../../../core/i18n/i18n.service';
 import { Locale } from '../../../../core/i18n/locale';
 import { CountUpDirective } from '../../../../shared/directives/count-up.directive';
 import { Icon } from '../../../../shared/ui/icon';
+import { Roll } from '../../../../shared/ui/roll';
 
 const CONTENT: Record<Locale, {
   badge: string; title: string; accent: string; subtitle: string;
@@ -64,7 +65,7 @@ const CONTENT: Record<Locale, {
 @Component({
   selector: 'app-hero',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [RouterLink, CountUpDirective, Icon],
+  imports: [RouterLink, CountUpDirective, Icon, Roll],
   template: `
     <section class="relative overflow-hidden px-6 pb-16 pt-32 md:pt-40">
       <div class="pointer-events-none absolute -left-32 top-10 h-96 w-96 rounded-full bg-cyan-400/15 blur-[110px] dark:bg-cyan-500/15"></div>
@@ -128,17 +129,17 @@ const CONTENT: Record<Locale, {
             <div class="mt-4 grid grid-cols-3 gap-3">
               <div class="rounded-2xl bg-cyan-500/10 p-3">
                 <p class="text-[10px] font-semibold uppercase text-cyan-700 dark:text-cyan-300">{{ c().panel.revenue }}</p>
-                <p class="mt-1 font-display text-lg font-black text-slate-900 dark:text-white">{{ revenue() }}M</p>
+                <p class="mt-1 font-display text-lg font-black text-slate-900 dark:text-white">24M</p>
                 <p class="text-[10px] font-bold text-emerald-500">▲ 18%</p>
               </div>
               <div class="rounded-2xl bg-indigo-500/10 p-3">
                 <p class="text-[10px] font-semibold uppercase text-indigo-600 dark:text-indigo-300">{{ c().panel.orders }}</p>
-                <p class="mt-1 font-display text-lg font-black text-slate-900 dark:text-white">{{ orders() }}</p>
+                <p class="mt-1 font-display text-lg font-black text-slate-900 dark:text-white"><app-roll [text]="ordersText()" /></p>
                 <p class="text-[10px] font-bold text-emerald-500">▲ 9%</p>
               </div>
               <div class="rounded-2xl bg-emerald-500/10 p-3">
                 <p class="text-[10px] font-semibold uppercase text-emerald-600 dark:text-emerald-300">{{ c().panel.clients }}</p>
-                <p class="mt-1 font-display text-lg font-black text-slate-900 dark:text-white">{{ clientsText() }}</p>
+                <p class="mt-1 font-display text-lg font-black text-slate-900 dark:text-white"><app-roll [text]="clientsText()" /></p>
                 <p class="text-[10px] font-bold text-emerald-500">▲ 24%</p>
               </div>
             </div>
@@ -149,9 +150,9 @@ const CONTENT: Record<Locale, {
                 <app-icon name="trendingUp" [size]="16" />
               </div>
               <div class="mt-3 flex h-24 items-end gap-2">
-                @for (b of bars(); track $index) {
+                @for (b of bars; track $index) {
                   <div class="hero-bar flex-1 rounded-t-md bg-gradient-to-t from-cyan-500 to-indigo-400 opacity-90"
-                       [style.height.%]="b" [style.animation-delay.ms]="$index * 90"></div>
+                       [style.height.%]="b"></div>
                 }
               </div>
             </div>
@@ -173,9 +174,17 @@ const CONTENT: Record<Locale, {
     </section>
   `,
   styles: [`
-    .hero-bar { animation: grow 1.1s cubic-bezier(0.16, 1, 0.3, 1) both; transition: height 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
+    .hero-bar { transform-origin: bottom; animation: grow 1.1s cubic-bezier(0.16, 1, 0.3, 1) both, wave 7s ease-in-out infinite; }
+    .hero-bar:nth-child(1) { animation-duration: 1.1s, 6.5s; animation-delay: 0s, -1s; }
+    .hero-bar:nth-child(2) { animation-duration: 1.1s, 7.6s; animation-delay: 0s, -3.2s; }
+    .hero-bar:nth-child(3) { animation-duration: 1.1s, 6.9s; animation-delay: 0s, -5s; }
+    .hero-bar:nth-child(4) { animation-duration: 1.1s, 8.3s; animation-delay: 0s, -2s; }
+    .hero-bar:nth-child(5) { animation-duration: 1.1s, 7.2s; animation-delay: 0s, -4.4s; }
+    .hero-bar:nth-child(6) { animation-duration: 1.1s, 6.6s; animation-delay: 0s, -6s; }
+    .hero-bar:nth-child(7) { animation-duration: 1.1s, 7.9s; animation-delay: 0s, -2.7s; }
     @keyframes grow { from { height: 0; } }
-    @media (prefers-reduced-motion: reduce) { .hero-bar { animation: none; transition: none; } }
+    @keyframes wave { 0%, 100% { transform: scaleY(0.9); } 50% { transform: scaleY(1.06); } }
+    @media (prefers-reduced-motion: reduce) { .hero-bar { animation: none; transform: none; } }
   `],
 })
 export class Hero {
@@ -183,12 +192,12 @@ export class Hero {
   protected readonly i18n = inject(I18nService);
   protected readonly c = computed(() => CONTENT[this.i18n.locale()]);
 
-  protected readonly revenue = signal(24);
   protected readonly orders = signal(312);
   protected readonly clients = signal(1280);
   protected readonly kpi = signal(80);
-  protected readonly bars = signal([45, 62, 50, 78, 68, 92, 84]);
+  protected readonly bars = [45, 62, 50, 78, 68, 92, 84];
 
+  protected readonly ordersText = computed(() => this.orders().toString());
   protected readonly clientsText = computed(() =>
     this.clients().toLocaleString('en-US').replace(/,/g, ' '),
   );
@@ -197,28 +206,13 @@ export class Hero {
   constructor() {
     afterNextRender(() => {
       if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-      this.animate(this.revenue, 0, 24, 1400);
-      this.animate(this.orders, 0, 312, 1600);
-      this.animate(this.clients, 0, 1280, 1600);
-      const id = setInterval(() => this.tick(), 2800);
+      const id = setInterval(() => this.tick(), 4200);
       this.destroyRef.onDestroy(() => clearInterval(id));
     });
   }
 
-  private animate(sig: WritableSignal<number>, from: number, to: number, duration: number): void {
-    const start = performance.now();
-    sig.set(from);
-    const step = (now: number) => {
-      const p = Math.min(1, (now - start) / duration);
-      sig.set(Math.round(from + (to - from) * (1 - Math.pow(1 - p, 3))));
-      if (p < 1) requestAnimationFrame(step);
-    };
-    requestAnimationFrame(step);
-  }
-
   private tick(): void {
-    this.orders.update((v) => v + 1 + Math.floor(Math.random() * 4));
-    this.clients.update((v) => v + Math.floor(Math.random() * 5));
-    this.bars.update((arr) => [...arr.slice(1), 40 + Math.floor(Math.random() * 55)]);
+    this.orders.update((v) => v + 1 + Math.floor(Math.random() * 3));
+    this.clients.update((v) => v + Math.floor(Math.random() * 4));
   }
 }
