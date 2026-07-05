@@ -2,7 +2,7 @@ import { ChangeDetectionStrategy, Component, computed, inject } from '@angular/c
 import { I18nService } from '../../../../core/i18n/i18n.service';
 import { Locale } from '../../../../core/i18n/locale';
 import { CountUpDirective } from '../../../../shared/directives/count-up.directive';
-import { RevealDirective } from '../../../../shared/directives/reveal.directive';
+import { StaggerDirective } from '../../../../shared/directives/stagger.directive';
 import { Icon } from '../../../../shared/ui/icon';
 
 interface Stat {
@@ -36,10 +36,10 @@ const CONTENT: Record<Locale, Stat[]> = {
 @Component({
   selector: 'app-stats',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [Icon, CountUpDirective, RevealDirective],
+  imports: [Icon, CountUpDirective, StaggerDirective],
   template: `
     <section id="stats" class="px-6 py-10">
-      <div class="glass-strong rainbow-edge mx-auto grid max-w-6xl grid-cols-2 gap-6 rounded-3xl px-6 py-10 md:grid-cols-4" appReveal>
+      <div class="glass-strong rainbow-edge mx-auto grid max-w-6xl grid-cols-2 gap-6 rounded-3xl px-6 py-10 md:grid-cols-4" appStagger>
         @for (s of c(); track s.label) {
           <div class="text-center">
             <div class="mx-auto grid h-11 w-11 place-items-center rounded-xl bg-cyan-500/10 text-cyan-600 dark:text-cyan-400">

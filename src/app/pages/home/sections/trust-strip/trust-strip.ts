@@ -2,7 +2,7 @@ import { ChangeDetectionStrategy, Component, computed, inject } from '@angular/c
 import { I18nService } from '../../../../core/i18n/i18n.service';
 import { Locale } from '../../../../core/i18n/locale';
 import { Icon } from '../../../../shared/ui/icon';
-import { RevealDirective } from '../../../../shared/directives/reveal.directive';
+import { StaggerDirective } from '../../../../shared/directives/stagger.directive';
 
 type Client = { name: string; industry: string; icon: string };
 
@@ -39,7 +39,7 @@ const CONTENT: Record<Locale, { eyebrow: string; stat: string; clients: Client[]
 @Component({
   selector: 'app-trust-strip',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [Icon, RevealDirective],
+  imports: [Icon, StaggerDirective],
   template: `
     <section id="clients" class="px-6 py-12">
       <div class="mx-auto max-w-6xl">
@@ -55,10 +55,9 @@ const CONTENT: Record<Locale, { eyebrow: string; stat: string; clients: Client[]
           </span>
         </div>
 
-        <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <div appStagger class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
           @for (client of c().clients; track client.name) {
             <div
-              [appReveal]="120"
               class="glass rounded-xl flex items-center gap-4 p-4"
             >
               <div
