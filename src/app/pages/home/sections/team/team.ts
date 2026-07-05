@@ -4,6 +4,7 @@ import { Locale } from '../../../../core/i18n/locale';
 import { Icon } from '../../../../shared/ui/icon';
 import { SectionHeading } from '../../../../shared/ui/section-heading';
 import { RevealDirective } from '../../../../shared/directives/reveal.directive';
+import { TiltDirective } from '../../../../shared/directives/tilt.directive';
 
 type Member = {
   initials: string;
@@ -104,7 +105,7 @@ const CONTENT: Record<
 @Component({
   selector: 'app-team',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [Icon, SectionHeading, RevealDirective],
+  imports: [Icon, SectionHeading, RevealDirective, TiltDirective],
   template: `
     <section id="team" class="px-6 py-20 md:py-28">
       <div class="mx-auto max-w-6xl">
@@ -118,7 +119,7 @@ const CONTENT: Record<
 
         <div class="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2">
           @for (m of c().members; track m.initials) {
-            <div appReveal [appReveal]="120" class="glass rainbow-edge rounded-3xl p-7">
+            <div appReveal [appReveal]="120" appTilt class="glass rainbow-edge rounded-3xl p-7">
               <div class="flex items-center gap-4">
                 <div
                   class="grid h-16 w-16 shrink-0 place-items-center rounded-full bg-brand-gradient text-xl font-black text-white shadow-[var(--shadow-glow)]"

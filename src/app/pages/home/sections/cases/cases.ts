@@ -2,6 +2,7 @@ import { ChangeDetectionStrategy, Component, computed, inject } from '@angular/c
 import { I18nService } from '../../../../core/i18n/i18n.service';
 import { Locale } from '../../../../core/i18n/locale';
 import { RevealDirective } from '../../../../shared/directives/reveal.directive';
+import { TiltDirective } from '../../../../shared/directives/tilt.directive';
 import { Icon } from '../../../../shared/ui/icon';
 import { SectionHeading } from '../../../../shared/ui/section-heading';
 
@@ -146,7 +147,7 @@ const CONTENT: Record<Locale, {
 @Component({
   selector: 'app-cases',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [SectionHeading, Icon, RevealDirective],
+  imports: [SectionHeading, Icon, RevealDirective, TiltDirective],
   template: `
     <section id="cases" class="px-6 py-20 md:py-28">
       <div class="mx-auto max-w-6xl">
@@ -160,7 +161,7 @@ const CONTENT: Record<Locale, {
 
         <div class="mt-14 grid gap-6 lg:grid-cols-3">
           @for (item of c().cases; track item.company) {
-            <article appReveal [appReveal]="$index * 120"
+            <article appReveal [appReveal]="$index * 120" appTilt
               class="glass rainbow-edge flex flex-col rounded-2xl p-6">
               <div class="flex items-center justify-between gap-3">
                 <div class="grid h-12 w-12 place-items-center rounded-2xl bg-cyan-500/10 text-cyan-600 dark:text-cyan-400">

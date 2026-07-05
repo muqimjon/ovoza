@@ -4,6 +4,7 @@ import { Locale } from '../../../../core/i18n/locale';
 import { SectionHeading } from '../../../../shared/ui/section-heading';
 import { Icon } from '../../../../shared/ui/icon';
 import { RevealDirective } from '../../../../shared/directives/reveal.directive';
+import { TiltDirective } from '../../../../shared/directives/tilt.directive';
 
 type Card = { sector: string; location: string; icon: string };
 
@@ -66,7 +67,7 @@ const CONTENT: Record<Locale, Copy> = {
 @Component({
   selector: 'app-testimonials',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [SectionHeading, Icon, RevealDirective],
+  imports: [SectionHeading, Icon, RevealDirective, TiltDirective],
   template: `
     <section id="testimonials" class="px-6 py-20 md:py-28">
       <div class="mx-auto max-w-6xl">
@@ -83,6 +84,7 @@ const CONTENT: Record<Locale, Copy> = {
             <figure
               appReveal
               [appReveal]="i * 120"
+              appTilt
               class="glass flex flex-col rounded-2xl border border-dashed border-slate-300/70 p-6 dark:border-white/10"
             >
               <div class="flex items-center justify-between">
