@@ -35,7 +35,7 @@ const CONTENT: Record<
         initials: 'AS',
         name: 'Avazbek Siddiqov',
         role: 'Desktop & Mobile Developer',
-        desc: 'Loyihaning mijoz har kuni ko‘radigan qismiga javobgar: kassa va omborda uzilmay ishlaydigan Windows dasturlari hamda dala xodimlari va sotuvchilar uchun mobil ilovalar. Foydalanuvchi qulayligi va tezligi uning zimmasida.',
+        desc: 'Loyihaning mijoz har kuni ko‘radigan qismiga javobgar: kassa va omborda uzilmay ishlaydigan Windows dasturlari hamda savdo agentlari va sotuvchilar uchun mobil ilovalar. Foydalanuvchi qulayligi va tezligi uning zimmasida.',
         tagsIcon: 'smartphone',
         tags: 'Windows • iOS • Android',
       },
