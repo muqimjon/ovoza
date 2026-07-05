@@ -11,11 +11,10 @@
 npm-debug.log
 yarn-error.log
 
-# Environment & Vercel
+# Environment
 .env
 .env.local
 .env.*.local
-/.vercel
 
 # IDEs and editors
 .idea/

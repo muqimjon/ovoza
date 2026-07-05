@@ -1,164 +1,164 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://ovoza.vercel.app/</loc>
-    <xhtml:link rel="alternate" hreflang="uz" href="https://ovoza.vercel.app/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://ovoza.vercel.app/ru"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ovoza.vercel.app/en"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ovoza.vercel.app/"/>
+    <loc>https://ovoza.pages.dev/</loc>
+    <xhtml:link rel="alternate" hreflang="uz" href="https://ovoza.pages.dev/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://ovoza.pages.dev/ru"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ovoza.pages.dev/en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ovoza.pages.dev/"/>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://ovoza.vercel.app/ru</loc>
-    <xhtml:link rel="alternate" hreflang="uz" href="https://ovoza.vercel.app/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://ovoza.vercel.app/ru"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ovoza.vercel.app/en"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ovoza.vercel.app/"/>
+    <loc>https://ovoza.pages.dev/ru</loc>
+    <xhtml:link rel="alternate" hreflang="uz" href="https://ovoza.pages.dev/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://ovoza.pages.dev/ru"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ovoza.pages.dev/en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ovoza.pages.dev/"/>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://ovoza.vercel.app/en</loc>
-    <xhtml:link rel="alternate" hreflang="uz" href="https://ovoza.vercel.app/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://ovoza.vercel.app/ru"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ovoza.vercel.app/en"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ovoza.vercel.app/"/>
+    <loc>https://ovoza.pages.dev/en</loc>
+    <xhtml:link rel="alternate" hreflang="uz" href="https://ovoza.pages.dev/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://ovoza.pages.dev/ru"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ovoza.pages.dev/en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ovoza.pages.dev/"/>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://ovoza.vercel.app/blog</loc>
-    <xhtml:link rel="alternate" hreflang="uz" href="https://ovoza.vercel.app/blog"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://ovoza.vercel.app/ru/blog"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ovoza.vercel.app/en/blog"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ovoza.vercel.app/blog"/>
+    <loc>https://ovoza.pages.dev/blog</loc>
+    <xhtml:link rel="alternate" hreflang="uz" href="https://ovoza.pages.dev/blog"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://ovoza.pages.dev/ru/blog"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ovoza.pages.dev/en/blog"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ovoza.pages.dev/blog"/>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ovoza.vercel.app/ru/blog</loc>
-    <xhtml:link rel="alternate" hreflang="uz" href="https://ovoza.vercel.app/blog"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://ovoza.vercel.app/ru/blog"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ovoza.vercel.app/en/blog"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ovoza.vercel.app/blog"/>
+    <loc>https://ovoza.pages.dev/ru/blog</loc>
+    <xhtml:link rel="alternate" hreflang="uz" href="https://ovoza.pages.dev/blog"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://ovoza.pages.dev/ru/blog"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ovoza.pages.dev/en/blog"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ovoza.pages.dev/blog"/>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ovoza.vercel.app/en/blog</loc>
-    <xhtml:link rel="alternate" hreflang="uz" href="https://ovoza.vercel.app/blog"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://ovoza.vercel.app/ru/blog"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ovoza.vercel.app/en/blog"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ovoza.vercel.app/blog"/>
+    <loc>https://ovoza.pages.dev/en/blog</loc>
+    <xhtml:link rel="alternate" hreflang="uz" href="https://ovoza.pages.dev/blog"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://ovoza.pages.dev/ru/blog"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ovoza.pages.dev/en/blog"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ovoza.pages.dev/blog"/>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ovoza.vercel.app/blog/biznesni-avtomatlashtirish-nimadan-boshlanadi</loc>
-    <xhtml:link rel="alternate" hreflang="uz" href="https://ovoza.vercel.app/blog/biznesni-avtomatlashtirish-nimadan-boshlanadi"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://ovoza.vercel.app/ru/blog/biznesni-avtomatlashtirish-nimadan-boshlanadi"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ovoza.vercel.app/en/blog/biznesni-avtomatlashtirish-nimadan-boshlanadi"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ovoza.vercel.app/blog/biznesni-avtomatlashtirish-nimadan-boshlanadi"/>
+    <loc>https://ovoza.pages.dev/blog/biznesni-avtomatlashtirish-nimadan-boshlanadi</loc>
+    <xhtml:link rel="alternate" hreflang="uz" href="https://ovoza.pages.dev/blog/biznesni-avtomatlashtirish-nimadan-boshlanadi"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://ovoza.pages.dev/ru/blog/biznesni-avtomatlashtirish-nimadan-boshlanadi"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ovoza.pages.dev/en/blog/biznesni-avtomatlashtirish-nimadan-boshlanadi"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ovoza.pages.dev/blog/biznesni-avtomatlashtirish-nimadan-boshlanadi"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://ovoza.vercel.app/ru/blog/biznesni-avtomatlashtirish-nimadan-boshlanadi</loc>
-    <xhtml:link rel="alternate" hreflang="uz" href="https://ovoza.vercel.app/blog/biznesni-avtomatlashtirish-nimadan-boshlanadi"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://ovoza.vercel.app/ru/blog/biznesni-avtomatlashtirish-nimadan-boshlanadi"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ovoza.vercel.app/en/blog/biznesni-avtomatlashtirish-nimadan-boshlanadi"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ovoza.vercel.app/blog/biznesni-avtomatlashtirish-nimadan-boshlanadi"/>
+    <loc>https://ovoza.pages.dev/ru/blog/biznesni-avtomatlashtirish-nimadan-boshlanadi</loc>
+    <xhtml:link rel="alternate" hreflang="uz" href="https://ovoza.pages.dev/blog/biznesni-avtomatlashtirish-nimadan-boshlanadi"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://ovoza.pages.dev/ru/blog/biznesni-avtomatlashtirish-nimadan-boshlanadi"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ovoza.pages.dev/en/blog/biznesni-avtomatlashtirish-nimadan-boshlanadi"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ovoza.pages.dev/blog/biznesni-avtomatlashtirish-nimadan-boshlanadi"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://ovoza.vercel.app/en/blog/biznesni-avtomatlashtirish-nimadan-boshlanadi</loc>
-    <xhtml:link rel="alternate" hreflang="uz" href="https://ovoza.vercel.app/blog/biznesni-avtomatlashtirish-nimadan-boshlanadi"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://ovoza.vercel.app/ru/blog/biznesni-avtomatlashtirish-nimadan-boshlanadi"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ovoza.vercel.app/en/blog/biznesni-avtomatlashtirish-nimadan-boshlanadi"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ovoza.vercel.app/blog/biznesni-avtomatlashtirish-nimadan-boshlanadi"/>
+    <loc>https://ovoza.pages.dev/en/blog/biznesni-avtomatlashtirish-nimadan-boshlanadi</loc>
+    <xhtml:link rel="alternate" hreflang="uz" href="https://ovoza.pages.dev/blog/biznesni-avtomatlashtirish-nimadan-boshlanadi"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://ovoza.pages.dev/ru/blog/biznesni-avtomatlashtirish-nimadan-boshlanadi"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ovoza.pages.dev/en/blog/biznesni-avtomatlashtirish-nimadan-boshlanadi"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ovoza.pages.dev/blog/biznesni-avtomatlashtirish-nimadan-boshlanadi"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://ovoza.vercel.app/blog/crm-tizimi-yoki-excel</loc>
-    <xhtml:link rel="alternate" hreflang="uz" href="https://ovoza.vercel.app/blog/crm-tizimi-yoki-excel"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://ovoza.vercel.app/ru/blog/crm-tizimi-yoki-excel"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ovoza.vercel.app/en/blog/crm-tizimi-yoki-excel"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ovoza.vercel.app/blog/crm-tizimi-yoki-excel"/>
+    <loc>https://ovoza.pages.dev/blog/crm-tizimi-yoki-excel</loc>
+    <xhtml:link rel="alternate" hreflang="uz" href="https://ovoza.pages.dev/blog/crm-tizimi-yoki-excel"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://ovoza.pages.dev/ru/blog/crm-tizimi-yoki-excel"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ovoza.pages.dev/en/blog/crm-tizimi-yoki-excel"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ovoza.pages.dev/blog/crm-tizimi-yoki-excel"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://ovoza.vercel.app/ru/blog/crm-tizimi-yoki-excel</loc>
-    <xhtml:link rel="alternate" hreflang="uz" href="https://ovoza.vercel.app/blog/crm-tizimi-yoki-excel"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://ovoza.vercel.app/ru/blog/crm-tizimi-yoki-excel"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ovoza.vercel.app/en/blog/crm-tizimi-yoki-excel"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ovoza.vercel.app/blog/crm-tizimi-yoki-excel"/>
+    <loc>https://ovoza.pages.dev/ru/blog/crm-tizimi-yoki-excel</loc>
+    <xhtml:link rel="alternate" hreflang="uz" href="https://ovoza.pages.dev/blog/crm-tizimi-yoki-excel"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://ovoza.pages.dev/ru/blog/crm-tizimi-yoki-excel"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ovoza.pages.dev/en/blog/crm-tizimi-yoki-excel"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ovoza.pages.dev/blog/crm-tizimi-yoki-excel"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://ovoza.vercel.app/en/blog/crm-tizimi-yoki-excel</loc>
-    <xhtml:link rel="alternate" hreflang="uz" href="https://ovoza.vercel.app/blog/crm-tizimi-yoki-excel"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://ovoza.vercel.app/ru/blog/crm-tizimi-yoki-excel"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ovoza.vercel.app/en/blog/crm-tizimi-yoki-excel"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ovoza.vercel.app/blog/crm-tizimi-yoki-excel"/>
+    <loc>https://ovoza.pages.dev/en/blog/crm-tizimi-yoki-excel</loc>
+    <xhtml:link rel="alternate" hreflang="uz" href="https://ovoza.pages.dev/blog/crm-tizimi-yoki-excel"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://ovoza.pages.dev/ru/blog/crm-tizimi-yoki-excel"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ovoza.pages.dev/en/blog/crm-tizimi-yoki-excel"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ovoza.pages.dev/blog/crm-tizimi-yoki-excel"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://ovoza.vercel.app/blog/ombor-dasturini-qanday-tanlash</loc>
-    <xhtml:link rel="alternate" hreflang="uz" href="https://ovoza.vercel.app/blog/ombor-dasturini-qanday-tanlash"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://ovoza.vercel.app/ru/blog/ombor-dasturini-qanday-tanlash"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ovoza.vercel.app/en/blog/ombor-dasturini-qanday-tanlash"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ovoza.vercel.app/blog/ombor-dasturini-qanday-tanlash"/>
+    <loc>https://ovoza.pages.dev/blog/ombor-dasturini-qanday-tanlash</loc>
+    <xhtml:link rel="alternate" hreflang="uz" href="https://ovoza.pages.dev/blog/ombor-dasturini-qanday-tanlash"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://ovoza.pages.dev/ru/blog/ombor-dasturini-qanday-tanlash"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ovoza.pages.dev/en/blog/ombor-dasturini-qanday-tanlash"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ovoza.pages.dev/blog/ombor-dasturini-qanday-tanlash"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://ovoza.vercel.app/ru/blog/ombor-dasturini-qanday-tanlash</loc>
-    <xhtml:link rel="alternate" hreflang="uz" href="https://ovoza.vercel.app/blog/ombor-dasturini-qanday-tanlash"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://ovoza.vercel.app/ru/blog/ombor-dasturini-qanday-tanlash"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ovoza.vercel.app/en/blog/ombor-dasturini-qanday-tanlash"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ovoza.vercel.app/blog/ombor-dasturini-qanday-tanlash"/>
+    <loc>https://ovoza.pages.dev/ru/blog/ombor-dasturini-qanday-tanlash</loc>
+    <xhtml:link rel="alternate" hreflang="uz" href="https://ovoza.pages.dev/blog/ombor-dasturini-qanday-tanlash"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://ovoza.pages.dev/ru/blog/ombor-dasturini-qanday-tanlash"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ovoza.pages.dev/en/blog/ombor-dasturini-qanday-tanlash"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ovoza.pages.dev/blog/ombor-dasturini-qanday-tanlash"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://ovoza.vercel.app/en/blog/ombor-dasturini-qanday-tanlash</loc>
-    <xhtml:link rel="alternate" hreflang="uz" href="https://ovoza.vercel.app/blog/ombor-dasturini-qanday-tanlash"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://ovoza.vercel.app/ru/blog/ombor-dasturini-qanday-tanlash"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ovoza.vercel.app/en/blog/ombor-dasturini-qanday-tanlash"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ovoza.vercel.app/blog/ombor-dasturini-qanday-tanlash"/>
+    <loc>https://ovoza.pages.dev/en/blog/ombor-dasturini-qanday-tanlash</loc>
+    <xhtml:link rel="alternate" hreflang="uz" href="https://ovoza.pages.dev/blog/ombor-dasturini-qanday-tanlash"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://ovoza.pages.dev/ru/blog/ombor-dasturini-qanday-tanlash"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ovoza.pages.dev/en/blog/ombor-dasturini-qanday-tanlash"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ovoza.pages.dev/blog/ombor-dasturini-qanday-tanlash"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://ovoza.vercel.app/blog/call-markaz-kpi-qanday-olchanadi</loc>
-    <xhtml:link rel="alternate" hreflang="uz" href="https://ovoza.vercel.app/blog/call-markaz-kpi-qanday-olchanadi"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://ovoza.vercel.app/ru/blog/call-markaz-kpi-qanday-olchanadi"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ovoza.vercel.app/en/blog/call-markaz-kpi-qanday-olchanadi"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ovoza.vercel.app/blog/call-markaz-kpi-qanday-olchanadi"/>
+    <loc>https://ovoza.pages.dev/blog/call-markaz-kpi-qanday-olchanadi</loc>
+    <xhtml:link rel="alternate" hreflang="uz" href="https://ovoza.pages.dev/blog/call-markaz-kpi-qanday-olchanadi"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://ovoza.pages.dev/ru/blog/call-markaz-kpi-qanday-olchanadi"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ovoza.pages.dev/en/blog/call-markaz-kpi-qanday-olchanadi"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ovoza.pages.dev/blog/call-markaz-kpi-qanday-olchanadi"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://ovoza.vercel.app/ru/blog/call-markaz-kpi-qanday-olchanadi</loc>
-    <xhtml:link rel="alternate" hreflang="uz" href="https://ovoza.vercel.app/blog/call-markaz-kpi-qanday-olchanadi"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://ovoza.vercel.app/ru/blog/call-markaz-kpi-qanday-olchanadi"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ovoza.vercel.app/en/blog/call-markaz-kpi-qanday-olchanadi"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ovoza.vercel.app/blog/call-markaz-kpi-qanday-olchanadi"/>
+    <loc>https://ovoza.pages.dev/ru/blog/call-markaz-kpi-qanday-olchanadi</loc>
+    <xhtml:link rel="alternate" hreflang="uz" href="https://ovoza.pages.dev/blog/call-markaz-kpi-qanday-olchanadi"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://ovoza.pages.dev/ru/blog/call-markaz-kpi-qanday-olchanadi"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ovoza.pages.dev/en/blog/call-markaz-kpi-qanday-olchanadi"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ovoza.pages.dev/blog/call-markaz-kpi-qanday-olchanadi"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://ovoza.vercel.app/en/blog/call-markaz-kpi-qanday-olchanadi</loc>
-    <xhtml:link rel="alternate" hreflang="uz" href="https://ovoza.vercel.app/blog/call-markaz-kpi-qanday-olchanadi"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://ovoza.vercel.app/ru/blog/call-markaz-kpi-qanday-olchanadi"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ovoza.vercel.app/en/blog/call-markaz-kpi-qanday-olchanadi"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ovoza.vercel.app/blog/call-markaz-kpi-qanday-olchanadi"/>
+    <loc>https://ovoza.pages.dev/en/blog/call-markaz-kpi-qanday-olchanadi</loc>
+    <xhtml:link rel="alternate" hreflang="uz" href="https://ovoza.pages.dev/blog/call-markaz-kpi-qanday-olchanadi"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://ovoza.pages.dev/ru/blog/call-markaz-kpi-qanday-olchanadi"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ovoza.pages.dev/en/blog/call-markaz-kpi-qanday-olchanadi"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ovoza.pages.dev/blog/call-markaz-kpi-qanday-olchanadi"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

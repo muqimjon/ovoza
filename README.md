@@ -2,7 +2,7 @@
 
 Marketing site for **Ovoza Dasturlar** (Fergana, Uzbekistan) — a studio building custom CRM, inventory, KPI and automation systems for small and medium business.
 
-Built with **Angular 22** (zoneless, standalone, signals), prerendered to static HTML (SSG) for the best SEO and Core Web Vitals, multilingual (uz / ru / en), and deployed on **Vercel** with one serverless function for the lead form.
+Built with **Angular 22** (zoneless, standalone, signals), prerendered to static HTML (SSG) for the best SEO and Core Web Vitals, multilingual (uz / ru / en), and deployed on **Cloudflare Pages** with one Pages Function for the lead form.
 
 ## Stack
 
@@ -10,7 +10,7 @@ Built with **Angular 22** (zoneless, standalone, signals), prerendered to static
 - Static prerender via `@angular/ssr` (`outputMode: "static"`, `RenderMode.Prerender`)
 - Tailwind CSS v4
 - Runtime i18n (signal-based) with locale-prefixed routes: `/` (uz), `/ru`, `/en`
-- `api/lead.ts` — Vercel Node function → Telegram notification
+- `functions/api/lead.ts` — Cloudflare Pages Function → Telegram notification
 
 ## Local development
 
@@ -31,7 +31,7 @@ Output: `dist/ovoza/browser` (pure static — no server bundle is deployed).
 
 ## Environment variables
 
-Set these in **Vercel → Project → Settings → Environment Variables** (see `.env.example`):
+Set these in **Cloudflare Pages → Settings → Environment variables → Production** (see `.env.example`):
 
 | Variable | Purpose |
 | --- | --- |
@@ -39,13 +39,18 @@ Set these in **Vercel → Project → Settings → Environment Variables** (see 
 | `TELEGRAM_CHAT_ID` | Chat/channel that receives leads |
 | `APP_BASE_URL` | (optional) overrides the canonical base URL used by the sitemap generator |
 
-## Deploy (Vercel)
+Changing environment variables requires a fresh deploy to take effect.
 
-1. `npm i -g vercel` and `vercel login`
-2. From the project root: `vercel` (first run links the project), then `vercel --prod`
-3. Add the environment variables above, then redeploy.
+## Deploy (Cloudflare Pages)
 
-`vercel.json` pins the static output and Angular build; `api/lead.ts` is detected automatically as a serverless function.
+Connected to GitHub — every push to `main` builds and ships automatically.
+
+- **Framework preset:** None
+- **Build command:** `npm run build`
+- **Build output directory:** `dist/ovoza/browser`
+- **Node version:** pinned to `24.15.0` via `.node-version` (Angular 22 requires Node ≥ 22.22.3 / 24.15.0; Cloudflare's default is older and does not honour `package.json` `engines`).
+
+`functions/api/lead.ts` is auto-detected as a Pages Function and served at `/api/lead` — no config needed.
 
 ## SEO
 
@@ -53,4 +58,4 @@ Set these in **Vercel → Project → Settings → Environment Variables** (see 
 - JSON-LD: Organization, ProfessionalService, WebSite, Service/OfferCatalog on the home page; BlogPosting + BreadcrumbList on articles.
 - `public/sitemap.xml` and `public/robots.txt` are generated from the route + blog-slug list.
 
-Base URL is configured in `src/app/core/site.ts` (`baseUrl`). Change it there (and re-run the build) when the custom domain is ready.
+Base URL is configured in `src/app/core/site.ts` (`baseUrl`). Change it there (and re-run the build) when a custom domain is ready.
