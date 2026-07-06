@@ -67,7 +67,7 @@ const CONTENT: Record<Locale, {
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [RouterLink, CountUpDirective, Icon, Roll],
   template: `
-    <section class="relative overflow-hidden px-6 pb-16 pt-32 md:pt-40">
+    <section class="relative overflow-hidden px-6 pb-16 pt-28 sm:pt-32 md:pt-40">
       <div class="pointer-events-none absolute -left-32 top-10 h-96 w-96 rounded-full bg-cyan-400/15 blur-[110px] dark:bg-cyan-500/15"></div>
       <div class="pointer-events-none absolute -right-32 top-40 h-96 w-96 rounded-full bg-indigo-400/15 blur-[120px] dark:bg-indigo-500/15"></div>
 
@@ -77,7 +77,7 @@ const CONTENT: Record<Locale, {
             <app-icon name="sparkles" [size]="13" />{{ c().badge }}
           </span>
 
-          <h1 class="mt-6 font-display text-4xl font-black leading-[1.08] tracking-tight text-slate-900 dark:text-white sm:text-5xl md:text-6xl">
+          <h1 class="mt-6 font-display text-[clamp(1.6rem,7vw,3.75rem)] font-black leading-[1.1] tracking-tight text-slate-900 [overflow-wrap:break-word] dark:text-white">
             {{ c().title }} <span class="text-gradient">{{ c().accent }}</span>
           </h1>
 
@@ -113,7 +113,7 @@ const CONTENT: Record<Locale, {
         </div>
 
         <div class="relative lg:pl-6">
-          <div class="glass-strong rainbow-edge animate-[float_7s_ease-in-out_infinite] rounded-3xl p-5 shadow-2xl">
+          <div class="glass-strong rainbow-edge animate-[float_7s_ease-in-out_infinite] rounded-3xl p-4 shadow-2xl sm:p-5">
             <div class="flex items-center justify-between border-b border-slate-200/70 pb-3 dark:border-white/10">
               <div class="flex items-center gap-2">
                 <span class="h-3 w-3 rounded-full bg-red-400"></span>
